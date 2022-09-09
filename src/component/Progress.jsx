@@ -1,22 +1,28 @@
 import React from "react";
 
-class DefinitionsList extends React.Component{
+class Progress extends React.Component{
 
     render() {
-
-        const {data} = this.props
+        const { percentage } = this.props;
+        const styleWidth = {width: this.percentage+"%"}
 
         return (
-            <dl>
-                {data.map(data =>(
-                    <React.Fragment key ={data.id}>
-                        <dt>{data.dt}</dt>
-                        <dd>{data.dd}</dd>
-                    </React.Fragment>
-                ))}
-            </dl>
+            <>
+                <div className="progress">
+                    <div className="progress-bar"
+                         role="progressbar"
+                         aria-valuenow={this.props.percentage}
+                         aria-valuemin="0"
+                         aria-valuemax="100"
+                         aria-label="progressbar"
+                         style={styleWidth}>
+                    </div>
+                </div>
+            </>
+
         )
     }
 }
-export default DefinitionsList;
+export default Progress;
+
 

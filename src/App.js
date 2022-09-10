@@ -4,11 +4,10 @@ import Progress from "./component/Progress";
 function App() {
 
     return(
-        <div>
+        <div className="container p-4">
             <Progress percentage={40}/>
         </div>
     )
-
 }
 
 export default App;

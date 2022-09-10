@@ -4,7 +4,7 @@ class Progress extends React.Component{
 
     render() {
         const { percentage } = this.props;
-        const styleWidth = {width: this.percentage+"%"}
+        const styleWidth = {width: percentage+"%"}
 
         return (
             <>
